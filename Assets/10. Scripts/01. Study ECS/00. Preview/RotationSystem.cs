@@ -6,8 +6,10 @@ using Unity.Burst;
 namespace ECS_Preview
 {
     // ECS에서 System은 로직을 담당합니다.
+    [BurstCompile]
     public partial struct RotationSystem : ISystem
     {
+        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             // 특정 개체를 회전 시키는 로직을 작성해봅시다.
